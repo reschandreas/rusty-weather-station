@@ -1,6 +1,3 @@
-extern crate linux_embedded_hal as hal;
-extern crate bme280;
-
 use hal::{Delay, I2cdev};
 use bme280::BME280;
 

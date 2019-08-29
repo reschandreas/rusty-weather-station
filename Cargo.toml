@@ -1,5 +1,5 @@
 [package]
-name = "rsensor"
+name = "rusty-weather-station"
 version = "0.1.0"
 authors = ["Andreas Resch <andreas@resch.io>"]
 edition = "2018"
@@ -10,3 +10,5 @@ edition = "2018"
 rppal = "0.11.3"
 linux-embedded-hal = "0.2.0"
 bme280 = "0.1.2"
+dotenv_codegen = "0.14.1"
+postgres = "0.15"

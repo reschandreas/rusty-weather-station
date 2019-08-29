@@ -13,25 +13,19 @@ impl Relay {
         Ok(Relay {bmc_pin: _bcm_pin, output: Gpio::new()?.get(_bcm_pin)?.into_output()})
     }
     
-    pub fn on(&mut self) -> Result<(), Box<dyn Error>> {
+    pub fn on(&mut self) -> () {
         if !self.output.is_set_high() {
             self.output.set_high();
         }
-        
-        Ok(())
     }
     
-    pub fn off(&mut self) -> Result<(), Box<dyn Error>> {
+    pub fn off(&mut self) -> () {
         if !self.output.is_set_low() {
             self.output.set_low();
         }
-
-        Ok(())
     }
 
-    pub fn toggle(&mut self) -> Result<(), Box<dyn Error>> {
+    pub fn toggle(&mut self) -> () {
         self.output.toggle();
-
-        Ok(())
     }
 }
