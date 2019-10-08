@@ -1,7 +1,7 @@
 table! {
     measurements (id) {
         id -> Int4,
-        time -> Timestamp,
+        time -> Timestamptz,
         temperature -> Numeric,
         humidity -> Numeric,
         pressure -> Numeric,
